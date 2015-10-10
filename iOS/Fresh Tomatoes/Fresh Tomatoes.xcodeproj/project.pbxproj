@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4498001BC9A40D00711985 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4497FF1BC9A40D00711985 /* Movie.m */; settings = {ASSET_TAGS = (); }; };
+		4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498031BC9ADEC00711985 /* MovieDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498071BC9B33A00711985 /* MovieTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		4CF75C911BC7842100087927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C901BC7842100087927 /* main.m */; };
 		4CF75C941BC7842100087927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C931BC7842100087927 /* AppDelegate.m */; };
 		4CF75C971BC7842100087927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C961BC7842100087927 /* ViewController.m */; };
@@ -37,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4497FE1BC9A40D00711985 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		4C4497FF1BC9A40D00711985 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		4C4498021BC9ADEC00711985 /* MovieDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDataSource.h; sourceTree = "<group>"; };
+		4C4498031BC9ADEC00711985 /* MovieDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDataSource.m; sourceTree = "<group>"; };
+		4C4498061BC9B33A00711985 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		4C4498071BC9B33A00711985 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		4CF75C8C1BC7842100087927 /* Fresh Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fresh Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF75C901BC7842100087927 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF75C921BC7842100087927 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +93,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C4498011BC9AD5F00711985 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				4C4498021BC9ADEC00711985 /* MovieDataSource.h */,
+				4C4498031BC9ADEC00711985 /* MovieDataSource.m */,
+			);
+			name = Datasource;
+			sourceTree = "<group>";
+		};
+		4C4498051BC9B30400711985 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4C4498061BC9B33A00711985 /* MovieTableViewCell.h */,
+				4C4498071BC9B33A00711985 /* MovieTableViewCell.m */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		4CF75C831BC7842100087927 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +134,8 @@
 		4CF75C8E1BC7842100087927 /* Fresh Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				4C4498051BC9B30400711985 /* CustomViews */,
+				4C4498011BC9AD5F00711985 /* Datasource */,
 				4CF75CCA1BC7898600087927 /* APIs */,
 				4CF75CC81BC7887300087927 /* Models */,
 				4CF75CC71BC7876D00087927 /* Views */,
@@ -177,6 +206,8 @@
 		4CF75CC81BC7887300087927 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4C4497FE1BC9A40D00711985 /* Movie.h */,
+				4C4497FF1BC9A40D00711985 /* Movie.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -320,9 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4498001BC9A40D00711985 /* Movie.m in Sources */,
 				4CF75C971BC7842100087927 /* ViewController.m in Sources */,
+				4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */,
 				4CF75C941BC7842100087927 /* AppDelegate.m in Sources */,
 				4CF75CCF1BC78C3E00087927 /* RottenTomatoesAPI.m in Sources */,
+				4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */,
 				4CF75C9D1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld in Sources */,
 				4CF75C911BC7842100087927 /* main.m in Sources */,
 			);
@@ -550,6 +584,7 @@
 				4CF75CBE1BC7842200087927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CF75CBF1BC7842200087927 /* Build configuration list for PBXNativeTarget "Fresh TomatoesTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +593,7 @@
 				4CF75CC11BC7842200087927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CF75CC21BC7842200087927 /* Build configuration list for PBXNativeTarget "Fresh TomatoesUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +602,7 @@
 				4CF75CC41BC7842200087927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

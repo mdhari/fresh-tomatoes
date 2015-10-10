@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieDataSource.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *movieTableView;
+@property (strong, nonatomic) IBOutlet UISearchBar *movieSearchBar;
+
+@property (strong,nonatomic) MovieDataSource *dataSource;
 
 
 @end
