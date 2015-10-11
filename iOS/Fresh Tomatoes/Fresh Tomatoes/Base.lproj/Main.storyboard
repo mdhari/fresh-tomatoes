@@ -37,7 +37,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7q-Fm-HV3">
                                                     <rect key="frame" x="115" y="8" width="477" height="41"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -126,8 +126,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_movie_poster" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-gI-2Bd">
-                                <rect key="frame" x="20" y="64" width="560" height="187"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default_movie_poster" translatesAutoresizingMaskIntoConstraints="NO" id="4sd-gI-2Bd">
+                                <rect key="frame" x="20" y="78" width="560" height="187"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="187" id="F7k-9y-tRJ"/>
@@ -137,7 +137,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hl6-jc-28E">
-                                <rect key="frame" x="20" y="353" width="560" height="358"/>
+                                <rect key="frame" x="20" y="381" width="560" height="358"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="199" id="c1j-Nr-edL"/>
@@ -152,15 +152,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7n-hd-N93">
-                                <rect key="frame" x="20" y="324" width="560" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGs-0d-8Ma">
+                                <rect key="frame" x="0.0" y="31" width="600" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGs-0d-8Ma">
-                                <rect key="frame" x="0.0" y="31" width="600" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7n-hd-N93">
+                                <rect key="frame" x="20" y="340" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,9 +182,9 @@
                             <constraint firstItem="RSf-F7-X6t" firstAttribute="leading" secondItem="piW-mp-xQw" secondAttribute="leadingMargin" id="gU7-jz-Tuw"/>
                             <constraint firstItem="4sd-gI-2Bd" firstAttribute="trailing" secondItem="piW-mp-xQw" secondAttribute="trailingMargin" id="jjz-3C-myZ"/>
                             <constraint firstItem="B7n-hd-N93" firstAttribute="leading" secondItem="piW-mp-xQw" secondAttribute="leadingMargin" id="lKA-Be-8vl"/>
-                            <constraint firstItem="4sd-gI-2Bd" firstAttribute="top" secondItem="hfi-zF-hYM" secondAttribute="bottom" id="ljJ-TS-GnK"/>
                             <constraint firstItem="RSf-F7-X6t" firstAttribute="top" secondItem="4sd-gI-2Bd" secondAttribute="bottom" constant="32" id="mBb-P7-i1Q"/>
                             <constraint firstItem="hfi-zF-hYM" firstAttribute="leading" secondItem="piW-mp-xQw" secondAttribute="leadingMargin" constant="-20" id="pEz-HI-Xdy"/>
+                            <constraint firstItem="4sd-gI-2Bd" firstAttribute="top" secondItem="hfi-zF-hYM" secondAttribute="bottom" constant="24" id="uXb-OH-KVI"/>
                         </constraints>
                     </view>
                     <connections>
