@@ -110,4 +110,9 @@
 
 
 
+- (IBAction)refreshBtnPressed:(id)sender {
+    self.searchController.searchBar.text = @"";
+    [self.searchController dismissViewControllerAnimated:YES completion:nil];
+    [self populateMovies];
+}
 @end

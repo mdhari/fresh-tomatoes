@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <UISearchBarDelegate, UISearchResultsUpdating,UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *movieTableView;
+- (IBAction)refreshBtnPressed:(id)sender;
 
 @property (strong,nonatomic) MovieDataSource *dataSource;
 @property (strong, nonatomic) UISearchController *searchController;
