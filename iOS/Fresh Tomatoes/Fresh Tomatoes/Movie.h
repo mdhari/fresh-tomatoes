@@ -10,7 +10,7 @@
 
 @interface Movie : NSObject
 
-@property(strong,nonatomic) NSString *movieName;
+@property(strong,nonatomic) NSString *title;
 @property(strong,nonatomic) NSString *imageUrl;
 @property(strong,nonatomic) NSString *rating;
 @property(strong,nonatomic) NSString *desc;

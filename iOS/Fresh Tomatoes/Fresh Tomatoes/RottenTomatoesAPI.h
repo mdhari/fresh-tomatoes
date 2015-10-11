@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MovieDataSource.h"
+
 
 @interface RottenTomatoesAPI : NSObject
+
++(void)loadNewMoviesAndReturnToDataSource:(MovieDataSource*)movieDataSource;
 
 @end

@@ -9,7 +9,7 @@
 #ifndef application_properties_h
 #define application_properties_h
 
-#define WEBSERVICE_URL @"http://127.0.0.1"
+#define WEBSERVICE_URL @"http://private-05248-rottentomatoes.apiary-mock.com"
 
 
 #endif /* application_properties_h */
