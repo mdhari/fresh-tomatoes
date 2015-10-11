@@ -24,6 +24,9 @@
     self.descriptionTxtView.scrollEnabled = NO;
     self.descriptionTxtView.textContainer.maximumNumberOfLines = 0;
     self.descriptionTxtView.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;
+    if(self.movie.posterImg != nil){
+        self.movieImageView.image = self.movie.posterImg;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

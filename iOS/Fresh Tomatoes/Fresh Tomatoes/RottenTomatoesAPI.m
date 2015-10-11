@@ -41,6 +41,7 @@
                         movie.imageUrl = [movieListing valueForKey:@"image_url"];
                         movie.rating = [NSString stringWithFormat:@"Rating: %@",[movieListing valueForKey:@"rating"]];
                         movie.desc = [movieListing valueForKey:@"description"];
+                        [self loadImage:movie];
                         
                         [movieArray addObject:movie];
                     }
@@ -56,6 +57,25 @@
                 }
              
             }] resume];
+}
+
++(void) loadImages:(NSArray*) movies{
+    
+    for(Movie *movie in movies){
+        [self loadImage:movie];
+    }
+
+}
+
++(void) loadImage:(Movie*) movie{
+    
+    
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session downloadTaskWithURL:[NSURL URLWithString:movie.imageUrl] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+            // 3
+            movie.posterImg = [UIImage imageWithData:
+                               [NSData dataWithContentsOfURL:location]];
+        }] resume];
     
 }
 
