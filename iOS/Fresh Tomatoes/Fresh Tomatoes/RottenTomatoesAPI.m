@@ -73,8 +73,16 @@
         NSURLSession *session = [NSURLSession sharedSession];
         [[session downloadTaskWithURL:[NSURL URLWithString:movie.imageUrl] completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
             // 3
+            
+            NSLog(@"image location on disk: %@",location.absoluteString);
             movie.posterImg = [UIImage imageWithData:
                                [NSData dataWithContentsOfURL:location]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if ([[NSThread currentThread] isMainThread]){
+                    movie.imageView.image = movie.posterImg;
+                }
+            });
+            
         }] resume];
     
 }

@@ -65,9 +65,9 @@
     cell.movieTitleLbl.text = movie.title;
     cell.movieRatingLbl.text = movie.rating;
     
-    if(movie.posterImg != nil){
-        cell.movieImageView.image=movie.posterImg;
-    }
+    movie.imageView = cell.movieImageView;
+    movie.imageView.image = movie.posterImg;
+    
     
     return cell;
 }

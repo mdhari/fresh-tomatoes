@@ -16,5 +16,6 @@
 @property(strong,nonatomic) NSString *rating;
 @property(strong,nonatomic) NSString *desc;
 @property(strong,nonatomic) UIImage *posterImg;
+@property(strong,nonatomic) UIImageView *imageView;
 
 @end
