@@ -39,7 +39,7 @@
                         Movie *movie = [[Movie alloc]init];
                         movie.title = [movieListing valueForKey:@"movie_name"];
                         movie.imageUrl = [movieListing valueForKey:@"image_url"];
-                        movie.rating = [movieListing valueForKey:@"rating"];
+                        movie.rating = [NSString stringWithFormat:@"Rating: %@",[movieListing valueForKey:@"rating"]];
                         movie.desc = [movieListing valueForKey:@"description"];
                         
                         [movieArray addObject:movie];

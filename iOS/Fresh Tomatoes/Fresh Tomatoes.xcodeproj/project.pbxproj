@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C122EA81BC9FED400FDA631 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C122EA71BC9FED400FDA631 /* MovieDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		4C4498001BC9A40D00711985 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4497FF1BC9A40D00711985 /* Movie.m */; settings = {ASSET_TAGS = (); }; };
 		4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498031BC9ADEC00711985 /* MovieDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498071BC9B33A00711985 /* MovieTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C122EA61BC9FED400FDA631 /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		4C122EA71BC9FED400FDA631 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
 		4C4497FE1BC9A40D00711985 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		4C4497FF1BC9A40D00711985 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		4C4498021BC9ADEC00711985 /* MovieDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDataSource.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 			children = (
 				4CF75C951BC7842100087927 /* ViewController.h */,
 				4CF75C961BC7842100087927 /* ViewController.m */,
+				4C122EA61BC9FED400FDA631 /* MovieDetailsViewController.h */,
+				4C122EA71BC9FED400FDA631 /* MovieDetailsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4498001BC9A40D00711985 /* Movie.m in Sources */,
+				4C122EA81BC9FED400FDA631 /* MovieDetailsViewController.m in Sources */,
 				4CF75C971BC7842100087927 /* ViewController.m in Sources */,
 				4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */,
 				4CF75C941BC7842100087927 /* AppDelegate.m in Sources */,

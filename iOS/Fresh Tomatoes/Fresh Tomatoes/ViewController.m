@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MovieDetailsViewController.h"
 
 @interface ViewController ()
 
@@ -40,6 +41,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"MovieDetailSegue"])
+    {
+        Movie *movie = (Movie*)sender;
+        MovieDetailsViewController *viewController = [segue destinationViewController];
+        viewController.movie = movie;
+        
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    // lets piggyback on the sender argument to save ourselves the trouble of having another Movie reference
+    [self performSegueWithIdentifier:@"MovieDetailSegue" sender:self.dataSource.movies[indexPath.row]];
 }
 
 
