@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "MovieDataSource.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate>
+@interface ViewController : UIViewController <UISearchBarDelegate, UISearchResultsUpdating,UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *movieTableView;
-@property (strong, nonatomic) IBOutlet UISearchBar *movieSearchBar;
 
 @property (strong,nonatomic) MovieDataSource *dataSource;
+@property (strong, nonatomic) UISearchController *searchController;
+
 
 
 @end

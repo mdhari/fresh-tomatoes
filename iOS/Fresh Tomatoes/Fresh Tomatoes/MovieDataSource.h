@@ -13,9 +13,12 @@
 @interface MovieDataSource : NSObject <UITableViewDataSource>
 
 @property(strong,nonatomic) NSArray *movies;
+@property(strong,nonatomic) NSArray *searchResults;
 @property(strong,nonatomic) UITableView *tableView;
+@property(strong,nonatomic) UISearchController *searchController;
 
 -(void)loadNewMovies:(UITableView*)tblView;
+-(void)loadSearchResults:(NSString*) searchTxt;
 -(void)setNewMovies:(NSArray *)movies;
 
 @end

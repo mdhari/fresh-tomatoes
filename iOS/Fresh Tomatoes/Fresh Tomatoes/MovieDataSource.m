@@ -13,6 +13,18 @@
 
 @implementation MovieDataSource
 
+-(void)loadSearchResults:(NSString*) searchTxt{
+    if(searchTxt.length>0){
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"title contains[c] %@",
+                                    searchTxt];
+    
+        self.searchResults = [self.movies filteredArrayUsingPredicate:resultPredicate];}
+    else{
+        self.searchResults = self.movies;
+    }
+    [self.tableView reloadData];
+}
 
 -(void) loadNewMovies:(UITableView *)tblView{
     NSLog(@"MovieDataSource::getMovies start");
@@ -21,6 +33,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(self.searchController.active){
+        return self.searchResults.count;
+    }
     return self.movies.count;
 }
 
@@ -39,7 +54,13 @@
         cell = [[MovieTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     
-    Movie *movie = (Movie*)self.movies[indexPath.row];
+    Movie *movie;
+    if(self.searchController.active){
+        movie = (Movie*)self.searchResults[indexPath.row];
+    }
+    else{
+        movie = (Movie*)self.movies[indexPath.row];
+    }
     
     cell.movieTitleLbl.text = movie.title;
     cell.movieRatingLbl.text = movie.rating;
