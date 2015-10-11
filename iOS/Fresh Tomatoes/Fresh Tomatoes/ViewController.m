@@ -38,6 +38,8 @@
     self.searchController.searchBar.delegate = self;
     self.movieTableView.tableHeaderView = self.searchController.searchBar;
     
+    
+    
     // The search bar does not seem to set its size automatically
     // which causes it to have zero height when there is no scope
     // bar. If you remove the scopeButtonTitles above and the
@@ -47,6 +49,11 @@
     [self.searchController.searchBar sizeToFit];
     self.dataSource.searchController = self.searchController;
 
+}
+
+- (void)didPresentSearchController:(UISearchController *)searchController
+{
+    [searchController.searchBar becomeFirstResponder];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
