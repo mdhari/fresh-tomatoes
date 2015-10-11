@@ -129,8 +129,8 @@
                                     <constraint firstAttribute="width" secondItem="4sd-gI-2Bd" secondAttribute="height" multiplier="560:187" id="Xod-cZ-Tek"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hl6-jc-28E">
-                                <rect key="frame" x="20" y="353" width="560" height="199"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hl6-jc-28E">
+                                <rect key="frame" x="20" y="353" width="560" height="358"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="199" id="c1j-Nr-edL"/>
@@ -178,7 +178,6 @@
                             <constraint firstItem="4sd-gI-2Bd" firstAttribute="top" secondItem="hfi-zF-hYM" secondAttribute="bottom" id="ljJ-TS-GnK"/>
                             <constraint firstItem="RSf-F7-X6t" firstAttribute="top" secondItem="4sd-gI-2Bd" secondAttribute="bottom" constant="32" id="mBb-P7-i1Q"/>
                             <constraint firstItem="hfi-zF-hYM" firstAttribute="leading" secondItem="piW-mp-xQw" secondAttribute="leadingMargin" constant="-20" id="pEz-HI-Xdy"/>
-                            <constraint firstItem="AWu-7f-oC5" firstAttribute="top" secondItem="Hl6-jc-28E" secondAttribute="bottom" constant="48" id="wId-1V-g5b"/>
                         </constraints>
                     </view>
                     <connections>

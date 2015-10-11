@@ -21,6 +21,9 @@
     self.movieTitleLbl.text = self.movie.title;
     self.movieRatingLbl.text = self.movie.rating;
     self.descriptionTxtView.text = self.movie.desc;
+    self.descriptionTxtView.scrollEnabled = NO;
+    self.descriptionTxtView.textContainer.maximumNumberOfLines = 0;
+    self.descriptionTxtView.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;
 }
 
 - (void)didReceiveMemoryWarning {
