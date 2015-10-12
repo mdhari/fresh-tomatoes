@@ -11,6 +11,8 @@
 		4C4498001BC9A40D00711985 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4497FF1BC9A40D00711985 /* Movie.m */; settings = {ASSET_TAGS = (); }; };
 		4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498031BC9ADEC00711985 /* MovieDataSource.m */; settings = {ASSET_TAGS = (); }; };
 		4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498071BC9B33A00711985 /* MovieTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		4C4592D01BCB383A002E45D4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4592CF1BCB383A002E45D4 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		4C4592D21BCB3861002E45D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4592D11BCB3861002E45D4 /* SystemConfiguration.framework */; };
 		4CF75C911BC7842100087927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C901BC7842100087927 /* main.m */; };
 		4CF75C941BC7842100087927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C931BC7842100087927 /* AppDelegate.m */; };
 		4CF75C971BC7842100087927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C961BC7842100087927 /* ViewController.m */; };
@@ -49,6 +51,9 @@
 		4C4498031BC9ADEC00711985 /* MovieDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDataSource.m; sourceTree = "<group>"; };
 		4C4498061BC9B33A00711985 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
 		4C4498071BC9B33A00711985 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		4C4592CE1BCB383A002E45D4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4C4592CF1BCB383A002E45D4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4C4592D11BCB3861002E45D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4CF75C8C1BC7842100087927 /* Fresh Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fresh Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF75C901BC7842100087927 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF75C921BC7842100087927 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4592D21BCB3861002E45D4 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +120,19 @@
 			name = CustomViews;
 			sourceTree = "<group>";
 		};
+		4C4592CD1BCB3825002E45D4 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4C4592CE1BCB383A002E45D4 /* Reachability.h */,
+				4C4592CF1BCB383A002E45D4 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		4CF75C831BC7842100087927 = {
 			isa = PBXGroup;
 			children = (
+				4C4592D11BCB3861002E45D4 /* SystemConfiguration.framework */,
 				4CF75C8E1BC7842100087927 /* Fresh Tomatoes */,
 				4CF75CAB1BC7842200087927 /* Fresh TomatoesTests */,
 				4CF75CB61BC7842200087927 /* Fresh TomatoesUITests */,
@@ -137,6 +153,7 @@
 		4CF75C8E1BC7842100087927 /* Fresh Tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				4C4592CD1BCB3825002E45D4 /* Reachability */,
 				4C4498051BC9B30400711985 /* CustomViews */,
 				4C4498011BC9AD5F00711985 /* Datasource */,
 				4CF75CCA1BC7898600087927 /* APIs */,
@@ -360,6 +377,7 @@
 				4C122EA81BC9FED400FDA631 /* MovieDetailsViewController.m in Sources */,
 				4CF75C971BC7842100087927 /* ViewController.m in Sources */,
 				4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */,
+				4C4592D01BCB383A002E45D4 /* Reachability.m in Sources */,
 				4CF75C941BC7842100087927 /* AppDelegate.m in Sources */,
 				4CF75CCF1BC78C3E00087927 /* RottenTomatoesAPI.m in Sources */,
 				4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */,

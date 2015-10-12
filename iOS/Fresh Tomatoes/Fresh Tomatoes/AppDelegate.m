@@ -17,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Set app-wide shared cache (first number is megabyte value)
+    NSUInteger cacheSizeMemory = 100*1024*1024; // 100 MB
+    NSUInteger cacheSizeDisk = 500*1024*1024; // 500 MB
+    NSURLCache *sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"];
+    [NSURLCache setSharedURLCache:sharedCache];
+    sleep(1); // Critically important line, sadly, but it's worth it!
     return YES;
 }
 
@@ -42,6 +48,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
 #pragma mark - Core Data stack
