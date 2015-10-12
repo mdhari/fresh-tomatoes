@@ -13,6 +13,9 @@
 
 @implementation RottenTomatoesAPI
 
+/*
+ * method for writing movie json return from webservice to file for offline use
+ */
 +(void) writeJSONtoDisk:(NSData*)data{
     //get the documents directory:
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -21,12 +24,15 @@
     //make a file name to write the data to using the documents directory:
     NSString *fileName = [NSString stringWithFormat:@"%@/movieJson.json",documentsDirectory];
     //create content - four lines of text
-
+    
     //save content to the documents directory
     [data writeToFile:fileName atomically:YES];
     
 }
 
+/*
+ * method for retreiving movie json file from filesystem for offline use
+ */
 +(NSData*) getJSONFromDisk{
     NSArray *paths = NSSearchPathForDirectoriesInDomains
     (NSDocumentDirectory, NSUserDomainMask, YES);
@@ -38,37 +44,40 @@
     return [[NSData alloc] initWithContentsOfFile:fileName];
 }
 
+/*
+ * method for checking network avaliability and then determining if offline
+ * json should be pulled. Otherwise if network is avaliable, tap the API 
+ * for the json and populate an array with the movies on a background thread
+ */
 +(void)loadNewMoviesAndReturnToDataSource:(MovieDataSource*)movieDataSource{
     
-    NSLog(@"RottenTomatoesAPI::getMovies start");
-    
-    NSUserDefaults *defaults;
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-    if (networkStatus == NotReachable) { // no internet, don't do anything
-         defaults = [NSUserDefaults standardUserDefaults];
+    if (networkStatus == NotReachable) { // no internet, pull from disk
         NSData *data = [RottenTomatoesAPI getJSONFromDisk];
         if(data != nil){
             NSLog(@"movie json pulled from disk...");
             NSMutableArray *movieArray = [[NSMutableArray alloc]init];
-        NSError *jsonError = nil;
-        NSArray *movieJson = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
-        for (NSDictionary *movieListing in [movieJson valueForKey:@"movies"]) {
+            NSError *jsonError = nil;
+            NSArray *movieJson = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
+            for (NSDictionary *movieListing in [movieJson valueForKey:@"movies"]) {
+                
+                Movie *movie = [[Movie alloc]init];
+                movie.title = [movieListing valueForKey:@"movie_name"];
+                movie.imageUrl = [movieListing valueForKey:@"image_url"];
+                movie.rating = [NSString stringWithFormat:@"Rating: %@",[movieListing valueForKey:@"rating"]];
+                movie.desc = [movieListing valueForKey:@"description"];
+                [self loadImage:movie];
+                
+                [movieArray addObject:movie];
+            }
             
-            Movie *movie = [[Movie alloc]init];
-            movie.title = [movieListing valueForKey:@"movie_name"];
-            movie.imageUrl = [movieListing valueForKey:@"image_url"];
-            movie.rating = [NSString stringWithFormat:@"Rating: %@",[movieListing valueForKey:@"rating"]];
-            movie.desc = [movieListing valueForKey:@"description"];
-            [self loadImage:movie];
-            
-            [movieArray addObject:movie];
-        }
-
             [movieDataSource setNewMovies:movieArray];
-
+            
         }
-
+        
+        [movieDataSource dismissHUD];
+        
     } else { // there is internet connection
         
         NSURLSession *session = [NSURLSession sharedSession];
@@ -79,7 +88,11 @@
                                         NSError *error) {
                         if (error != nil) {
                             NSLog(@"Error with webservice: %@",error.description);
-                            
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                if ([[NSThread currentThread] isMainThread]){
+                                    [movieDataSource dismissHUD];
+                                }
+                            });
                         }else{
                             
                             NSMutableArray *movieArray = [[NSMutableArray alloc]init];
@@ -105,10 +118,9 @@
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 if ([[NSThread currentThread] isMainThread]){
                                     [movieDataSource setNewMovies:movieArray];
+                                    [movieDataSource dismissHUD];
                                 }
                             });
-                            
-                            
                             
                         }
                         
@@ -118,14 +130,11 @@
     }
 }
 
-+(void) loadImages:(NSArray*) movies{
-    
-    for(Movie *movie in movies){
-        [self loadImage:movie];
-    }
-    
-}
-
+/*
+ * method for loading images on a background thread, takes a
+ * Movie object so that we can simply change the image on the
+ * Main UIThread. Try to make use of memory/disk caching.
+ */
 +(void) loadImage:(Movie*) movie{
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -139,9 +148,9 @@
             NSLog(@"Error with getting image: %@",error.description);
         }
         movie.posterImg = [UIImage imageWithData:data];
-        NSLog(@"ImageSize: %f, %f", movie.posterImg.size.width, movie.posterImg.size.height);
-        NSLog(@"DiskCache: %lu of %lu", (unsigned long)[[NSURLCache sharedURLCache] currentDiskUsage], (unsigned long)[[NSURLCache sharedURLCache] diskCapacity]);
-        NSLog(@"MemoryCache: %lu of %lu", (unsigned long)[[NSURLCache sharedURLCache] currentMemoryUsage], (unsigned long)[[NSURLCache sharedURLCache] memoryCapacity]);
+//        NSLog(@"ImageSize: %f, %f", movie.posterImg.size.width, movie.posterImg.size.height);
+//        NSLog(@"DiskCache: %lu of %lu", (unsigned long)[[NSURLCache sharedURLCache] currentDiskUsage], (unsigned long)[[NSURLCache sharedURLCache] diskCapacity]);
+//        NSLog(@"MemoryCache: %lu of %lu", (unsigned long)[[NSURLCache sharedURLCache] currentMemoryUsage], (unsigned long)[[NSURLCache sharedURLCache] memoryCapacity]);
         
         
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -13,6 +13,5 @@
 @interface RottenTomatoesAPI : NSObject
 
 +(void)loadNewMoviesAndReturnToDataSource:(MovieDataSource*)movieDataSource;
-+(void)loadImages:(NSArray*)movies;
 
 @end

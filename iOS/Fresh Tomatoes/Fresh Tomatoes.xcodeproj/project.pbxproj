@@ -13,11 +13,11 @@
 		4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4498071BC9B33A00711985 /* MovieTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		4C4592D01BCB383A002E45D4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4592CF1BCB383A002E45D4 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		4C4592D21BCB3861002E45D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4592D11BCB3861002E45D4 /* SystemConfiguration.framework */; };
+		4C4592D51BCB4E38002E45D4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4592D41BCB4E38002E45D4 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		4CF75C911BC7842100087927 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C901BC7842100087927 /* main.m */; };
 		4CF75C941BC7842100087927 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C931BC7842100087927 /* AppDelegate.m */; };
 		4CF75C971BC7842100087927 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C961BC7842100087927 /* ViewController.m */; };
 		4CF75C9A1BC7842200087927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF75C981BC7842200087927 /* Main.storyboard */; };
-		4CF75C9D1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75C9B1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld */; };
 		4CF75C9F1BC7842200087927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF75C9E1BC7842200087927 /* Assets.xcassets */; };
 		4CF75CA21BC7842200087927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF75CA01BC7842200087927 /* LaunchScreen.storyboard */; };
 		4CF75CAD1BC7842200087927 /* Fresh_TomatoesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF75CAC1BC7842200087927 /* Fresh_TomatoesTests.m */; };
@@ -54,6 +54,8 @@
 		4C4592CE1BCB383A002E45D4 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4C4592CF1BCB383A002E45D4 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4C4592D11BCB3861002E45D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4C4592D31BCB4E38002E45D4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4C4592D41BCB4E38002E45D4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		4CF75C8C1BC7842100087927 /* Fresh Tomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fresh Tomatoes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF75C901BC7842100087927 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CF75C921BC7842100087927 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,7 +63,6 @@
 		4CF75C951BC7842100087927 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4CF75C961BC7842100087927 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4CF75C991BC7842200087927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4CF75C9C1BC7842200087927 /* Fresh_Tomatoes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fresh_Tomatoes.xcdatamodel; sourceTree = "<group>"; };
 		4CF75C9E1BC7842200087927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CF75CA11BC7842200087927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF75CA31BC7842200087927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +115,8 @@
 		4C4498051BC9B30400711985 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				4C4592D31BCB4E38002E45D4 /* MBProgressHUD.h */,
+				4C4592D41BCB4E38002E45D4 /* MBProgressHUD.m */,
 				4C4498061BC9B33A00711985 /* MovieTableViewCell.h */,
 				4C4498071BC9B33A00711985 /* MovieTableViewCell.m */,
 			);
@@ -163,7 +166,6 @@
 				4CF75CC51BC7874500087927 /* ViewControllers */,
 				4CF75C9E1BC7842200087927 /* Assets.xcassets */,
 				4CF75CA31BC7842200087927 /* Info.plist */,
-				4CF75C9B1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld */,
 				4CF75C8F1BC7842100087927 /* Supporting Files */,
 				4CF75CC91BC7893B00087927 /* application-properties.h */,
 			);
@@ -377,11 +379,11 @@
 				4C122EA81BC9FED400FDA631 /* MovieDetailsViewController.m in Sources */,
 				4CF75C971BC7842100087927 /* ViewController.m in Sources */,
 				4C4498081BC9B33A00711985 /* MovieTableViewCell.m in Sources */,
+				4C4592D51BCB4E38002E45D4 /* MBProgressHUD.m in Sources */,
 				4C4592D01BCB383A002E45D4 /* Reachability.m in Sources */,
 				4CF75C941BC7842100087927 /* AppDelegate.m in Sources */,
 				4CF75CCF1BC78C3E00087927 /* RottenTomatoesAPI.m in Sources */,
 				4C4498041BC9ADEC00711985 /* MovieDataSource.m in Sources */,
-				4CF75C9D1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld in Sources */,
 				4CF75C911BC7842100087927 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,19 +631,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4CF75C9B1BC7842200087927 /* Fresh_Tomatoes.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4CF75C9C1BC7842200087927 /* Fresh_Tomatoes.xcdatamodel */,
-			);
-			currentVersion = 4CF75C9C1BC7842200087927 /* Fresh_Tomatoes.xcdatamodel */;
-			path = Fresh_Tomatoes.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 4CF75C841BC7842100087927 /* Project object */;
 }

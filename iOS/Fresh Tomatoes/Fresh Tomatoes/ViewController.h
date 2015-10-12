@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieDataSource.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController : UIViewController <UISearchBarDelegate, UISearchResultsUpdating,UITableViewDelegate>
 
@@ -16,7 +17,7 @@
 
 @property (strong,nonatomic) MovieDataSource *dataSource;
 @property (strong, nonatomic) UISearchController *searchController;
-
+@property (strong,nonatomic) MBProgressHUD *hud;
 
 
 @end

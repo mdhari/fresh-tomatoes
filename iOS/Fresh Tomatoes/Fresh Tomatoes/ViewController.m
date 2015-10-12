@@ -20,14 +20,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"ViewController::viewDidLoad");
     
-    self.dataSource = [[MovieDataSource alloc]init];
+    self.hud = [MBProgressHUD HUDForView:self.view];
+    self.dataSource = [[MovieDataSource alloc] initWithView:self.view];
     
     // initialize the movie tables delegate and datasource
     self.movieTableView.delegate=self;
     self.movieTableView.dataSource=self.dataSource;
-    
-    
-    [self populateMovies];
     
     // searchDisplayController was deprecated in iOS 8
     // used manual impl here
@@ -38,24 +36,26 @@
     self.searchController.searchBar.delegate = self;
     self.movieTableView.tableHeaderView = self.searchController.searchBar;
     
-    
-    
-    // The search bar does not seem to set its size automatically
-    // which causes it to have zero height when there is no scope
-    // bar. If you remove the scopeButtonTitles above and the
-    // search bar is no longer visible make sure you force the
-    // search bar to size itself (make sure you do this after
-    // you add it to the view hierarchy).
     [self.searchController.searchBar sizeToFit];
     self.dataSource.searchController = self.searchController;
+    
+    // start the network calls
+    [self populateMovies];
 
 }
 
+/*
+ * present the keyboard
+ */
 - (void)didPresentSearchController:(UISearchController *)searchController
 {
     [searchController.searchBar becomeFirstResponder];
 }
 
+/*
+ * make sure when we return from movie details page that if there is valid search, then
+ * force the searchbar to be active
+ */
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
@@ -65,9 +65,12 @@
     
 }
 
+/*
+ * method to start network calls for data. Will show the spinner to indicate activity.
+ */
 - (void) populateMovies{
     NSLog(@"ViewController::populateMovies");
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.dataSource loadNewMovies:self.movieTableView];
 
 }
@@ -77,6 +80,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ * make sure to pass along the movie that we want details for
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"MovieDetailSegue"])
     {
@@ -87,10 +93,13 @@
     }
 }
 
+#pragma mark -
+#pragma mark UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     // lets piggyback on the sender argument to save ourselves the trouble of having another Movie reference
-    if(self.searchController.active){
-        
+    if(self.searchController.active){ // we need to pop searchController off the view stack before proceeding
+                                      // make sure we are using what the user actually picked from either search or normal pick
         [self.searchController dismissViewControllerAnimated:YES completion:nil];
         [self performSegueWithIdentifier:@"MovieDetailSegue" sender:self.dataSource.searchResults[indexPath.row]];
     }else{
@@ -100,16 +109,16 @@
 }
 
 #pragma mark -
-#pragma mark === UISearchResultsUpdating ===
-#pragma mark -
+#pragma mark UISearchResultsUpdating
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     NSString *searchString = searchController.searchBar.text;
     [self.dataSource loadSearchResults:searchString];
 }
 
-
-
+/*
+ * Restart data pull, should not be queued multiple times because of activity spinner blocking it
+ */
 - (IBAction)refreshBtnPressed:(id)sender {
     self.searchController.searchBar.text = @"";
     [self.searchController dismissViewControllerAnimated:YES completion:nil];
