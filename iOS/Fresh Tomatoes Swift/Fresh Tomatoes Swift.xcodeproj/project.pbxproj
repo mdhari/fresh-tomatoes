@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F353D1431C06545E00FA8812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1421C06545E00FA8812 /* AppDelegate.swift */; };
+		F353D1451C06545E00FA8812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1441C06545E00FA8812 /* ViewController.swift */; };
+		F353D1481C06545E00FA8812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F353D1461C06545E00FA8812 /* Main.storyboard */; };
+		F353D14A1C06545E00FA8812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F353D1491C06545E00FA8812 /* Assets.xcassets */; };
+		F353D14D1C06545E00FA8812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F353D14B1C06545E00FA8812 /* LaunchScreen.storyboard */; };
+		F353D1581C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1571C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift */; };
+		F353D1631C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1621C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F353D1541C06545E00FA8812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F353D1371C06545E00FA8812 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F353D13E1C06545E00FA8812;
+			remoteInfo = "Fresh Tomatoes Swift";
+		};
+		F353D15F1C06545E00FA8812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F353D1371C06545E00FA8812 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F353D13E1C06545E00FA8812;
+			remoteInfo = "Fresh Tomatoes Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F353D13F1C06545E00FA8812 /* Fresh Tomatoes Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fresh Tomatoes Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F353D1421C06545E00FA8812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F353D1441C06545E00FA8812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F353D1471C06545E00FA8812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F353D1491C06545E00FA8812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F353D14C1C06545E00FA8812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F353D14E1C06545E00FA8812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F353D1531C06545E00FA8812 /* Fresh Tomatoes SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fresh Tomatoes SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F353D1571C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fresh_Tomatoes_SwiftTests.swift; sourceTree = "<group>"; };
+		F353D1591C06545E00FA8812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F353D15E1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fresh Tomatoes SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F353D1621C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fresh_Tomatoes_SwiftUITests.swift; sourceTree = "<group>"; };
+		F353D1641C06545E00FA8812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F353D13C1C06545E00FA8812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D1501C06545E00FA8812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D15B1C06545E00FA8812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F353D1361C06545E00FA8812 = {
+			isa = PBXGroup;
+			children = (
+				F353D1411C06545E00FA8812 /* Fresh Tomatoes Swift */,
+				F353D1561C06545E00FA8812 /* Fresh Tomatoes SwiftTests */,
+				F353D1611C06545E00FA8812 /* Fresh Tomatoes SwiftUITests */,
+				F353D1401C06545E00FA8812 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F353D1401C06545E00FA8812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F353D13F1C06545E00FA8812 /* Fresh Tomatoes Swift.app */,
+				F353D1531C06545E00FA8812 /* Fresh Tomatoes SwiftTests.xctest */,
+				F353D15E1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F353D1411C06545E00FA8812 /* Fresh Tomatoes Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F353D1421C06545E00FA8812 /* AppDelegate.swift */,
+				F353D1441C06545E00FA8812 /* ViewController.swift */,
+				F353D1461C06545E00FA8812 /* Main.storyboard */,
+				F353D1491C06545E00FA8812 /* Assets.xcassets */,
+				F353D14B1C06545E00FA8812 /* LaunchScreen.storyboard */,
+				F353D14E1C06545E00FA8812 /* Info.plist */,
+			);
+			path = "Fresh Tomatoes Swift";
+			sourceTree = "<group>";
+		};
+		F353D1561C06545E00FA8812 /* Fresh Tomatoes SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				F353D1571C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift */,
+				F353D1591C06545E00FA8812 /* Info.plist */,
+			);
+			path = "Fresh Tomatoes SwiftTests";
+			sourceTree = "<group>";
+		};
+		F353D1611C06545E00FA8812 /* Fresh Tomatoes SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F353D1621C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift */,
+				F353D1641C06545E00FA8812 /* Info.plist */,
+			);
+			path = "Fresh Tomatoes SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F353D13E1C06545E00FA8812 /* Fresh Tomatoes Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F353D1671C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes Swift" */;
+			buildPhases = (
+				F353D13B1C06545E00FA8812 /* Sources */,
+				F353D13C1C06545E00FA8812 /* Frameworks */,
+				F353D13D1C06545E00FA8812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fresh Tomatoes Swift";
+			productName = "Fresh Tomatoes Swift";
+			productReference = F353D13F1C06545E00FA8812 /* Fresh Tomatoes Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F353D1521C06545E00FA8812 /* Fresh Tomatoes SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F353D16A1C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes SwiftTests" */;
+			buildPhases = (
+				F353D14F1C06545E00FA8812 /* Sources */,
+				F353D1501C06545E00FA8812 /* Frameworks */,
+				F353D1511C06545E00FA8812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F353D1551C06545E00FA8812 /* PBXTargetDependency */,
+			);
+			name = "Fresh Tomatoes SwiftTests";
+			productName = "Fresh Tomatoes SwiftTests";
+			productReference = F353D1531C06545E00FA8812 /* Fresh Tomatoes SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F353D15D1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F353D16D1C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes SwiftUITests" */;
+			buildPhases = (
+				F353D15A1C06545E00FA8812 /* Sources */,
+				F353D15B1C06545E00FA8812 /* Frameworks */,
+				F353D15C1C06545E00FA8812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F353D1601C06545E00FA8812 /* PBXTargetDependency */,
+			);
+			name = "Fresh Tomatoes SwiftUITests";
+			productName = "Fresh Tomatoes SwiftUITests";
+			productReference = F353D15E1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F353D1371C06545E00FA8812 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Michael Hari";
+				TargetAttributes = {
+					F353D13E1C06545E00FA8812 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					F353D1521C06545E00FA8812 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = F353D13E1C06545E00FA8812;
+					};
+					F353D15D1C06545E00FA8812 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = F353D13E1C06545E00FA8812;
+					};
+				};
+			};
+			buildConfigurationList = F353D13A1C06545E00FA8812 /* Build configuration list for PBXProject "Fresh Tomatoes Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F353D1361C06545E00FA8812;
+			productRefGroup = F353D1401C06545E00FA8812 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F353D13E1C06545E00FA8812 /* Fresh Tomatoes Swift */,
+				F353D1521C06545E00FA8812 /* Fresh Tomatoes SwiftTests */,
+				F353D15D1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F353D13D1C06545E00FA8812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F353D14D1C06545E00FA8812 /* LaunchScreen.storyboard in Resources */,
+				F353D14A1C06545E00FA8812 /* Assets.xcassets in Resources */,
+				F353D1481C06545E00FA8812 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D1511C06545E00FA8812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D15C1C06545E00FA8812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F353D13B1C06545E00FA8812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F353D1451C06545E00FA8812 /* ViewController.swift in Sources */,
+				F353D1431C06545E00FA8812 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D14F1C06545E00FA8812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F353D1581C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F353D15A1C06545E00FA8812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F353D1631C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F353D1551C06545E00FA8812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F353D13E1C06545E00FA8812 /* Fresh Tomatoes Swift */;
+			targetProxy = F353D1541C06545E00FA8812 /* PBXContainerItemProxy */;
+		};
+		F353D1601C06545E00FA8812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F353D13E1C06545E00FA8812 /* Fresh Tomatoes Swift */;
+			targetProxy = F353D15F1C06545E00FA8812 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F353D1461C06545E00FA8812 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F353D1471C06545E00FA8812 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F353D14B1C06545E00FA8812 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F353D14C1C06545E00FA8812 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F353D1651C06545E00FA8812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F353D1661C06545E00FA8812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F353D1681C06545E00FA8812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fresh Tomatoes Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F353D1691C06545E00FA8812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Fresh Tomatoes Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F353D16B1C06545E00FA8812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fresh Tomatoes SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fresh Tomatoes Swift.app/Fresh Tomatoes Swift";
+			};
+			name = Debug;
+		};
+		F353D16C1C06545E00FA8812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Fresh Tomatoes SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fresh Tomatoes Swift.app/Fresh Tomatoes Swift";
+			};
+			name = Release;
+		};
+		F353D16E1C06545E00FA8812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Fresh Tomatoes SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Fresh Tomatoes Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F353D16F1C06545E00FA8812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Fresh Tomatoes SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "slalom.Fresh-Tomatoes-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Fresh Tomatoes Swift";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F353D13A1C06545E00FA8812 /* Build configuration list for PBXProject "Fresh Tomatoes Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F353D1651C06545E00FA8812 /* Debug */,
+				F353D1661C06545E00FA8812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F353D1671C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F353D1681C06545E00FA8812 /* Debug */,
+				F353D1691C06545E00FA8812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F353D16A1C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F353D16B1C06545E00FA8812 /* Debug */,
+				F353D16C1C06545E00FA8812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F353D16D1C06545E00FA8812 /* Build configuration list for PBXNativeTarget "Fresh Tomatoes SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F353D16E1C06545E00FA8812 /* Debug */,
+				F353D16F1C06545E00FA8812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F353D1371C06545E00FA8812 /* Project object */;
+}
