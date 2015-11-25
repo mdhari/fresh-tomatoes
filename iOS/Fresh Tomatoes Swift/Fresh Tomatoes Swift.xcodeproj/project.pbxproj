@@ -14,6 +14,7 @@
 		F353D14D1C06545E00FA8812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F353D14B1C06545E00FA8812 /* LaunchScreen.storyboard */; };
 		F353D1581C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1571C06545E00FA8812 /* Fresh_Tomatoes_SwiftTests.swift */; };
 		F353D1631C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1621C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift */; };
+		F353D1721C0669AD00FA8812 /* MovieItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353D1711C0669AD00FA8812 /* MovieItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F353D15E1C06545E00FA8812 /* Fresh Tomatoes SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fresh Tomatoes SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F353D1621C06545E00FA8812 /* Fresh_Tomatoes_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fresh_Tomatoes_SwiftUITests.swift; sourceTree = "<group>"; };
 		F353D1641C06545E00FA8812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F353D1711C0669AD00FA8812 /* MovieItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F353D1411C06545E00FA8812 /* Fresh Tomatoes Swift */ = {
 			isa = PBXGroup;
 			children = (
+				F353D1701C06697300FA8812 /* CustomTableViewCells */,
 				F353D1421C06545E00FA8812 /* AppDelegate.swift */,
 				F353D1441C06545E00FA8812 /* ViewController.swift */,
 				F353D1461C06545E00FA8812 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				F353D1641C06545E00FA8812 /* Info.plist */,
 			);
 			path = "Fresh Tomatoes SwiftUITests";
+			sourceTree = "<group>";
+		};
+		F353D1701C06697300FA8812 /* CustomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F353D1711C0669AD00FA8812 /* MovieItemTableViewCell.swift */,
+			);
+			name = CustomTableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F353D1721C0669AD00FA8812 /* MovieItemTableViewCell.swift in Sources */,
 				F353D1451C06545E00FA8812 /* ViewController.swift in Sources */,
 				F353D1431C06545E00FA8812 /* AppDelegate.swift in Sources */,
 			);

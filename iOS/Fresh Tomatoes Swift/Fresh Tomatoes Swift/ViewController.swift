@@ -26,18 +26,18 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieArray.count;
+        return movieArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("MovieItem")
+        var cell:MovieItemTableViewCell! = tableView.dequeueReusableCellWithIdentifier("MovieItem") as! MovieItemTableViewCell
         
         if(cell == nil){
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "MovieItem")
+            cell = MovieItemTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "MovieItem")
         }
         
-        cell.textLabel?.text = movieArray[indexPath.row]
+        cell.movieTitle.text = movieArray[indexPath.row]
         
         return cell
     }
