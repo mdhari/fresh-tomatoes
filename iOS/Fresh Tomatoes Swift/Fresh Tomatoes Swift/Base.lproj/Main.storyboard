@@ -46,6 +46,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="7Ql-aT-eYA" secondAttribute="trailing" constant="-20" id="sP9-Ai-dhZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieTblView" destination="7Ql-aT-eYA" id="VxL-Oc-wUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
